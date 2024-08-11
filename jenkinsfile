@@ -6,7 +6,6 @@ PATH = "/opt/maven/bin:$PATH"
     stages {
         stage('Build') {
             steps {
-              //  echo 'BUild artifacts'
 	       sh 'mvn clean install'
             }
         }
