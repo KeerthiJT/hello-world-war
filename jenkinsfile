@@ -1,23 +1,21 @@
 pipeline {
     agent any
+environment {
+PATH = "/opt/maven/bin:$PATH"
+}
     stages {
         stage('Build') {
             steps {
-                echo 'BUild artifacts'
-         //       sh 'mvn clean install'
+              //  echo 'BUild artifacts'
+	       sh 'mvn clean install'
             }
         }
-        stage('Test stage') {
+        stage('SonarQube analysis') {
             steps {
-                echo 'Run test cases'
-                //sh 'mvn test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-		echo 'Deploy stage'
-           //     deploy adapters: [tomcat9(credentialsId: '2ddab960-be6e-48b9-a2d0-d001019a8a0e', path: '', url: 'http://13.126.245.58:8090')], contextPath: null, war: '*/.war'
-            }
+		withSonarQubeEnv('sonarqube'){
+			sh "mvn sonar:sonar"
+		}
+		}
         }
     }
      
