@@ -44,5 +44,9 @@
             <url>http://3.110.105.133:8081/repository/new_project/</url>
         </repository>
     </repositories>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 </project>
