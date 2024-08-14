@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.efsavage</groupId>
     <artifactId>hello-world-war</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.0</version>
     <packaging>war</packaging>
     <name>Hello World Web Application Repository</name>
     <description>Simplest possible Java Webapp</description>
@@ -28,20 +28,20 @@
 
     <distributionManagement>
         <repository>
-            <id>new_project</id>
-            <url>http://43.205.203.198:8081/repository/new_project/</url>
+            <id>loginpage</id>
+            <url>http://13.233.8.54:8081/repository/loginpage/</url>
         </repository>
         <snapshotRepository>
             <id>maven-snapshots</id>
-            <url>http://43.205.203.198:8081/repository/new_project/</url>
+            <url>http://13.233.8.54:8081/repository/loginpage/</url>
         </snapshotRepository>
     </distributionManagement>
 
     <repositories>
         <repository>
-            <id>new_project</id>
-            <name>new_project</name>
-            <url>http://43.205.203.198:8081/repository/new_project/</url>
+            <id>loginpage</id>
+            <name>loginpage</name>
+            <url>http://13.233.8.54:8081/repository/loginpage/</url>
         </repository>
     </repositories>
     
